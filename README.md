@@ -21,21 +21,21 @@ go get github.com/visstars7/engine
 //call NewEngine to initiate engine object.
 router := engine.NewEngine()
 
-	router.GET("/", func(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
-		fmt.Fprint(w, "Anya Forger.")
-	})
+router.GET("/", func(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
+	fmt.Fprint(w, "Anya Forger.")
+})
 
-    // to use a middleware, call engine.Use method
-	router.Use(SimpleMiddleware)
+// to use a middleware, call engine.Use method
+router.Use(SimpleMiddleware)
 
-	server := http.Server{
-		Addr:    ":9000",
-		Handler: router,
-	}
+server := http.Server{
+	Addr:    ":9000",
+	Handler: router,
+}
 
-	if err := server.ListenAndServe(); err != nil {
-		panic(err)
-	}
+if err := server.ListenAndServe(); err != nil {
+	panic(err)
+}
 ```
 
 ## Contributing
