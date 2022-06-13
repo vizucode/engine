@@ -1,4 +1,4 @@
-module github.com/visstars7/engine
+module github.com/vizucode/engine
 
 go 1.18
 
