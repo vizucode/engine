@@ -16,7 +16,7 @@ https://github.com/julienschmidt/httprouter
 use go modules to install.
 
 ```bash
-go get github.com/visstars7/engine
+go get github.com/vizucode/engine
 ```
 
 ## Usage
